@@ -58,17 +58,11 @@ const isValidStyle = function (value) {
 //===========================//isValidSize//============================
 const isValidSize = function(size){
   if(typeof(size)==='string' && size!="S" && size!="XS" && size!="M" && size!="X" && size!="L" && size!="XXL" && size!="XL")return false;
-  // if(typeof(size)==='ob' && size!="S" && size!="XS" && size!="M" && size!="X" && size!="L" && size!="XXL" && size!="XL")return false;
   return true
 }
 
 
-//==============================// isValid-date //==============================
 
-// const isValidDate = function (date) {
-//   if (typeof date != "string") return false
-//   return moment(date, 'YYYY-MM-DD', true).isValid()
-// }
 //==============================// isValid-pincode //==============================
 
 const isvalidPincode = function (pincode) {

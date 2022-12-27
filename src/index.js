@@ -9,7 +9,7 @@ mongoose.set('strictQuery', true)
 
 app.use(multer().any())
 
-
+app.use(express.json());
 mongoose.connect("mongodb+srv://viHAan:vihaan@project5-of-room-27.fxww7ye.mongodb.net/group27Database", {
     useNewUrlParser: true 
 })
