@@ -39,10 +39,10 @@ const createUser = async function (req, res) {
     if(!address) {return res.status(400).send({ status: "false", message: "address is mandatory" })};
    //-------------------------------check validation--------------------------------
     if (!valid(fname)) {
-      return res.status(400).send({ status: "false", message: "fname must be present" });
+      return res.status(400).send({ status: "false", message: "fname must be present" });          // " "
     }
     if (!isValidName(fname)) {
-      return res.status(400).send({ status: "false", message: " first name must be in alphabetical order" });
+      return res.status(400).send({ status: "false", message: " first name must be in alphabetical order" });   // "54545"
     }
     if (!valid(lname)) {
       return res.status(400).send({ status: "false", message: "lname must be present" });
@@ -54,7 +54,7 @@ const createUser = async function (req, res) {
       return res.status(400).send({ status: "false", message: "email must be present" });
     }
     if (!isValidEmail(email)) {
-      return res.status(400).send({ status: "false", message: "email must be present" });
+      return res.status(400).send({ status: "false", message: "email must be Present" });
     }
 
     if (!valid(phone)) {
@@ -217,6 +217,9 @@ const getUserById = async function (req, res) {
     return res.status(500).send({ status: false, message: err.message })
   }
 };
+
+
+
 const updateUserProfile = async function (req, res) {
   try {
      const { userId } = req.params
